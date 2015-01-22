@@ -10,7 +10,7 @@ DB = PG.connect({:dbname => "train_system"})
 get("/") do
   @lines = Line.all()
   @stations = Station.all()
-  erb(:conductor)
+  erb(:index)
 end
 
 post("/lines") do
